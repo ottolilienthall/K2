@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunga Matahari</title>
+    <style>
+        /* Mengatur dasar halaman */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;  /* Menambahkan flex-direction agar konten dapat ditata secara vertikal */
+            text-align: center; /* Memusatkan teks */
+        }
+
+        /* Menyusun bunga */
+        .sunflower {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            z-index: 2;
+        }
+
+        /* Membuat kelopak bunga matahari */
+        .petal {
+            position: absolute;
+            width: 50px;
+            height: 180px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900); 
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform-origin: 50% 100%;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+            transform: translateX(-50%) rotate(0deg);
+            z-index: 3;
+        }
+
+        /* Menempatkan kelopak bunga di sekitar pusat bunga */
+        .petal:nth-child(1) { transform: translateX(-50%) rotate(0deg); }
+        .petal:nth-child(2) { transform: translateX(-50%) rotate(30deg); }
+        .petal:nth-child(3) { transform: translateX(-50%) rotate(60deg); }
+        .petal:nth-child(4) { transform: translateX(-50%) rotate(90deg); }
+        .petal:nth-child(5) { transform: translateX(-50%) rotate(120deg); }
+        .petal:nth-child(6) { transform: translateX(-50%) rotate(150deg); }
+        .petal:nth-child(7) { transform: translateX(-50%) rotate(180deg); }
+        .petal:nth-child(8) { transform: translateX(-50%) rotate(210deg); }
+        .petal:nth-child(9) { transform: translateX(-50%) rotate(240deg); }
+        .petal:nth-child(10) { transform: translateX(-50%) rotate(270deg); }
+        .petal:nth-child(11) { transform: translateX(-50%) rotate(300deg); }
+        .petal:nth-child(12) { transform: translateX(-50%) rotate(330deg); }
+
+        /* Membuat pusat bunga matahari (bagian tengah) */
+        .center {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, #6d4c41, #3e2723); 
+            border-radius: 50%;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+            z-index: 4;
+        }
+
+        /* Membuat tangkai bunga */
+        .stem {
+            position: absolute;
+            width: 30px;
+            height: 350px;
+            background-color: #388e3c; 
+            bottom: -70px;  
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+            z-index: 1;
+        }
+
+        /* Membuat daun bunga matahari */
+        .leaf {
+            position: absolute;
+            width: 180px;
+            height: 100px;
+            background-color: #2e7d32; 
+            border-radius: 50%;
+            transform-origin: 100% 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Daun kiri di posisi tengah tangkai */
+        .leaf-left {
+            left: 70px;  
+            top: 85%;  
+            transform: translateX(-50%) rotate(45deg);  
+        }
+
+        /* Daun kanan di posisi tengah tangkai */
+        .leaf-right {
+            left: 65%;  
+            top: 60%;  
+            transform: translateX(-50%) rotate(-45deg);  
+        }
+
+        /* Gaya untuk teks */
+        .message {
+            font-size: 24px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 20px; /* Memberikan jarak antara teks dan bunga */
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Selamat datang di dunia bunga matahari!</div>
+    <div class="sunflower">
+        <!-- Kelopak bunga matahari -->
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <!-- Pusat bunga matahari -->
+        <div class="center"></div>
+        <!-- Tangkai bunga -->
+        <div class="stem"></div>
+        <!-- Daun bunga -->
+        <div class="leaf leaf-left"></div>
+        <div class="leaf leaf-right"></div>
+    </div>
+</body>
+</html>
+
